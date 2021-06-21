@@ -1,11 +1,9 @@
 import React from "react";
 
-class V1 extends React.Component {
-    render() {
-        const {} = this.state;
-        return (
-            <>V1</>
-        );
-    }
+export default ({match, location}) => {
+console.log(match);
+console.log(location);
+    return(
+        <>V2 </>
+    );
 }
-export default V1;
