@@ -13,35 +13,37 @@ const useStyles = makeStyles(theme => ({
     toolbar: theme.mixins.toolbar
 }));
 
-function Drawer(props) {
+const menus = [{"name": "Home", "path": "/home"}
+                , {"name": "V1", "path": "/v1"}
+                , {"name": "V2", "path": "/v2"}
+                , {"name": "V3", "path": "/v3"}
+                ];
+export default function Drawer(props) {
     const classes = useStyles();
     const theme = useTheme();
 
     return (
         <div>
-        <div className={classes.toolbar}/>
-        <Divider/>
-        <List>
-            <Link to="/">
-                <ListItem key="Home" >
-                    <ListItemIcon>
-                        <MailIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Home"/>
-                </ListItem>
-            </Link>
-            {["V1", "V2"].map((text, index) => (
-                <Link to="/v1" >
-                    <ListItem button key={text} >
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
-                        </ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
-                </Link>
-            ))}
-        </List>
-    </div>
+            <div className={classes.toolbar}/>
+            <Divider/>
+            <List>
+                {menus.map((menu, index) => (
+                    <Link to={menu.path}>
+                        <ListItem button key={menu.name}>
+                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                            <ListItemText primary={menu.name} />
+                        </ListItem>
+                    </Link>
+                    // <Link to={menu.path}>
+                    //     <ListItem button key={menu.name}>
+                    //         <ListItemIcon>
+                    //             {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
+                    //         </ListItemIcon>
+                    //         <ListItemText primary={menu.name}/>
+                    //     </ListItem>
+                    // </Link>
+                ))}
+            </List>
+        </div>
     );
 }
-export default Drawer;

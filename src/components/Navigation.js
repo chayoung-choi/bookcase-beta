@@ -22,6 +22,7 @@ import Home from "../routes/Home";
 import V1 from "../routes/V1";
 import V2 from "../routes/V2";
 import AppDrawer from "../components/Drawer";
+import V3 from "../routes/V3";
 
 const drawerWidth = 240;
 
@@ -66,10 +67,6 @@ function ResponsiveDrawer(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-
-    // const drawer = (
-    //
-    // );
 
     return (
         <div className={classes.root}>
@@ -128,6 +125,7 @@ function ResponsiveDrawer(props) {
                         <Route path="/" exact={true} component={Home} />
                         <Route path="/v1" component={V1} />
                         <Route path="/v2/:id" component={V2} />
+                        <Route path="/v3" component={V3} />
                 </main>
             </BrowserRouter>
         </div>
