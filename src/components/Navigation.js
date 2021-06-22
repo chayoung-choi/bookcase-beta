@@ -16,8 +16,12 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {BrowserRouter, Link} from "react-router-dom";
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import AppRouter from "./Router";
+import Home from "../routes/Home";
+import V1 from "../routes/V1";
+import V2 from "../routes/V2";
+import AppDrawer from "../components/Drawer";
 
 const drawerWidth = 240;
 
@@ -43,7 +47,7 @@ const useStyles = makeStyles(theme => ({
             display: "none"
         }
     },
-    toolbar: theme.mixins.toolbar,
+
     drawerPaper: {
         width: drawerWidth
     },
@@ -63,32 +67,9 @@ function ResponsiveDrawer(props) {
         setMobileOpen(!mobileOpen);
     };
 
-    const drawer = (
-        <div>
-            <div className={classes.toolbar}/>
-            <Divider/>
-            <List>
-                <Link to="/">
-                    <ListItem key="Home" >
-                        <ListItemIcon>
-                          <MailIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Home"/>
-                    </ListItem>
-                </Link>
-                {["V1", "V2"].map((text, index) => (
-                    <Link to="/v1">
-                        <ListItem key={text} >
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
-                            </ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
-                    </Link>
-                ))}
-            </List>
-        </div>
-    );
+    // const drawer = (
+    //
+    // );
 
     return (
         <div className={classes.root}>
@@ -126,7 +107,7 @@ function ResponsiveDrawer(props) {
                                 keepMounted: true // Better open performance on mobile.
                             }}
                         >
-                            {drawer}
+                            <AppDrawer/>
                         </Drawer>
                     </Hidden>
                     <Hidden xsDown implementation="css">
@@ -137,14 +118,16 @@ function ResponsiveDrawer(props) {
                             variant="permanent"
                             open
                         >
-                            {drawer}
+                            <AppDrawer/>
                         </Drawer>
                     </Hidden>
                 </nav>
 
                 <main className={classes.content}>
                     <div className={classes.toolbar}/>
-                    <AppRouter></AppRouter>
+                        <Route path="/" exact={true} component={Home} />
+                        <Route path="/v1" component={V1} />
+                        <Route path="/v2/:id" component={V2} />
                 </main>
             </BrowserRouter>
         </div>

@@ -1,14 +1,16 @@
 import React from "react";
 import './App.css';
-import AppRouter from "./components/Router";
 import Navigation from "./components/Navigation";
+import {HashRouter} from "react-router-dom";
 
 function App() {
-  return (
-      <>
-          <Navigation></Navigation>
-      </>
-  );
+    return (
+        <>
+            <HashRouter>
+                <Navigation/>
+            </HashRouter>
+        </>
+    );
 }
 
 export default App;
