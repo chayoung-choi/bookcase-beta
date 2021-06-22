@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/bookcase/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/bookcase/static/js/main.a19959f1.chunk.js",
+    "main.js.map": "/bookcase/static/js/main.a19959f1.chunk.js.map",
+    "runtime-main.js": "/bookcase/static/js/runtime-main.3aa8906d.js",
+    "runtime-main.js.map": "/bookcase/static/js/runtime-main.3aa8906d.js.map",
+    "static/js/2.3bec113f.chunk.js": "/bookcase/static/js/2.3bec113f.chunk.js",
+    "static/js/2.3bec113f.chunk.js.map": "/bookcase/static/js/2.3bec113f.chunk.js.map",
+    "index.html": "/bookcase/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/bookcase/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.3bec113f.chunk.js.LICENSE.txt": "/bookcase/static/js/2.3bec113f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3aa8906d.js",
+    "static/js/2.3bec113f.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.a19959f1.chunk.js"
+  ]
+}
