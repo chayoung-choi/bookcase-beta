@@ -2,27 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./Router";
-import Home from "../routes/Home";
-import V1 from "../routes/V1";
-import V2 from "../routes/V2";
 import AppDrawer from "../components/Drawer";
-import V3 from "../routes/V3";
 
 const drawerWidth = 240;
 
@@ -42,13 +31,13 @@ const useStyles = makeStyles(theme => ({
             width: `calc(100% - ${drawerWidth}px)`
         }
     },
+    toolbar: theme.mixins.toolbar,
     menuButton: {
         marginRight: theme.spacing(2),
         [theme.breakpoints.up("sm")]: {
             display: "none"
         }
     },
-
     drawerPaper: {
         width: drawerWidth
     },
@@ -58,14 +47,20 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-function ResponsiveDrawer(props) {
+function Navigation(props) {
     const {container} = props;
     const classes = useStyles();
     const theme = useTheme();
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
+    const [mobile, setMobile] = React.useState(false);
+    const [windowSize, setWindowSize] = React.useState(window.innerWidth);
+console.log("windowSize", windowSize);
     const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
+        console.log("handleDrawerToggle");
+        console.log("mobile", mobile);
+        if (mobile){
+            setDrawerOpen(!drawerOpen);
+        }
     };
 
     return (
@@ -82,8 +77,8 @@ function ResponsiveDrawer(props) {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Responsive drawer
+                    <Typography variant="h6">
+                        {process.env.REACT_APP_NAME}
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -94,8 +89,9 @@ function ResponsiveDrawer(props) {
                         <Drawer
                             container={container}
                             variant="temporary"
+                            setMobile={true}
                             anchor={theme.direction === "rtl" ? "right" : "left"}
-                            open={mobileOpen}
+                            open={drawerOpen}
                             onClose={handleDrawerToggle}
                             classes={{
                                 paper: classes.drawerPaper
@@ -104,7 +100,7 @@ function ResponsiveDrawer(props) {
                                 keepMounted: true // Better open performance on mobile.
                             }}
                         >
-                            <AppDrawer/>
+                            <AppDrawer handleDrawerToggle={handleDrawerToggle}/>
                         </Drawer>
                     </Hidden>
                     <Hidden xsDown implementation="css">
@@ -115,31 +111,23 @@ function ResponsiveDrawer(props) {
                             variant="permanent"
                             open
                         >
-                            <AppDrawer/>
+                            <AppDrawer handleDrawerToggle={handleDrawerToggle}/>
                         </Drawer>
                     </Hidden>
                 </nav>
-
                 <main className={classes.content}>
                     <div className={classes.toolbar}/>
-                        <Route path="/" exact={true} component={Home} />
-                        <Route path="/v1" component={V1} />
-                        <Route path="/v2/:id" component={V2} />
-                        <Route path="/v3" component={V3} />
+                    <AppRouter/>
                 </main>
             </BrowserRouter>
         </div>
     );
 }
 
-ResponsiveDrawer.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
+Navigation.propTypes = {
     container: PropTypes.instanceOf(
         typeof Element === "undefined" ? Object : Element
     )
 };
 
-export default ResponsiveDrawer;
+export default Navigation;

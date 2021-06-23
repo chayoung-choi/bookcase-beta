@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="init project">
-      <change afterPath="$PROJECT_DIR$/src/routes/V3.js" afterDir="false" />
+    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="AppDrawer">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/navigation/apps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/V2Detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/V2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/V2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/router" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -75,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/router" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -105,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624257633986</updated>
       <workItem from="1624257638016" duration="12762000" />
-      <workItem from="1624366873710" duration="3002000" />
+      <workItem from="1624433105050" duration="4413000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1624264892493</created>

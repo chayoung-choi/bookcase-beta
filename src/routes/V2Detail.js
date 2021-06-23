@@ -5,8 +5,8 @@ console.log(match);
 console.log(location);
     return(
         <>
-            <>V2</>
-            <>{match.params?.id && match.params.id}</>
+            <>V2 Detail</>
+            <>{match.params.id}</>
         </>
     );
 }
