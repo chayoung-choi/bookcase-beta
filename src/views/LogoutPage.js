@@ -1,11 +1,11 @@
 import React from "react";
 
-const Error = ({location}) => {
+const LogoutPage = ({location}) => {
     return (
         <>
-            <h2>잘못된 요청입니다.</h2>
+            <h2>로그아웃 페이지</h2>
             <p>{location.pathname}</p>
         </>
     );
 }
-export default Error;
+export default LogoutPage;

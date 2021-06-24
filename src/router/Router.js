@@ -14,17 +14,13 @@ const Router = () => {
     }
 
     return (
-        <BrowserRouter>
-
-            <Switch>
-                <Route path={["/", "/bookcase"]} exact component={Home}/>
-                <MainLayout/>
-                <Route path="/v1" component={V1}/>
-                <Route path={["/v2", "/v2/:id"]} component={V2}/>
-                <Route path="/v3" component={V3}/>
-                <Route path="/*" component={Error}/>
-            </Switch>
-        </BrowserRouter>
+        <Switch>
+            <Route path={["/", "/bookcase"]} exact component={Home}/>
+            <Route path="/v1" component={V1}/>
+            <Route path={["/v2", "/v2/:id"]} component={V2}/>
+            <Route path="/v3" component={V3}/>
+            <Route path="/*" component={Error}/>
+        </Switch>
     );
 };
 export default Router;
