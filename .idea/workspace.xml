@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="AppDrawer">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/navigation/apps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/Router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/V2Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Error.js" afterDir="false" />
+    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="2021.06.23">
+      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/MainLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/V2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/V2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/apps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes/Menus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +20,20 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -86,6 +89,7 @@
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/router/routes" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
   </component>
@@ -113,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624257633986</updated>
       <workItem from="1624257638016" duration="12762000" />
-      <workItem from="1624433105050" duration="4413000" />
+      <workItem from="1624433105050" duration="14099000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1624264892493</created>
@@ -122,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624264892493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2021.06.23">
+      <created>1624438807428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624438807429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +153,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project" />
+    <MESSAGE value="2021.06.23" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021.06.23" />
   </component>
 </project>
