@@ -17,8 +17,7 @@ const App = (props) => {
         <BrowserRouter>
             <Switch>
                 <Route path="/" component={MainPage}/>
-                <Route path="/login" component={LoginPage}/>
-                <Route path="/logout" component={LogoutPage}/>
+
             </Switch>
         </BrowserRouter>
     );
