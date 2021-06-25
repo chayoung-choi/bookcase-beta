@@ -1,15 +1,19 @@
 import React from "react";
 import './App.css';
-import {BrowserRouter, Switch} from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import {BrowserRouter, Switch} from "react-router-dom";
+import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
+import Theme from "./config/Theme";
+
+const theme = Theme;
 
 const App = (props) => {
     return (
-        <BrowserRouter>
-            <Switch>
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
                 <MainLayout/>
-            </Switch>
-        </BrowserRouter>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
 export default App;

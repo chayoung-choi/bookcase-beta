@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import {makeStyles, useTheme} from "@material-ui/core/styles";
+import {createMuiTheme, makeStyles, useTheme} from "@material-ui/core/styles";
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./Router";
 import AppDrawer from "../components/Drawer";
@@ -50,7 +50,18 @@ const useStyles = makeStyles(theme => ({
 function Navigation(props) {
     const {container} = props;
     const classes = useStyles();
-    const theme = useTheme();
+
+    const theme = createMuiTheme({
+        palette: {
+            primary: {
+                main: '#1e88e5',
+            },
+            secondary: {
+                main: '#448aff',
+            },
+        },
+    });
+
     const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [mobile, setMobile] = React.useState(false);
     const [windowSize, setWindowSize] = React.useState(window.innerWidth);
@@ -64,7 +75,7 @@ console.log("windowSize", windowSize);
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} >
             <CssBaseline/>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
