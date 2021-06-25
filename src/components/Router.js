@@ -1,10 +1,10 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-import Home from "../routes/Home";
-import V1 from "../routes/V1";
-import V2 from "../routes/V2";
-import V2Detail from "../routes/V2Detail";
-import V3 from "../routes/V3";
+import Home from "../views/Home";
+import V1 from "../views/V1";
+import V2 from "../views/V2";
+import V2Detail from "../views/V2Detail";
+import V3 from "../views/V3";
 
 const AppRouter = () => {
     return (

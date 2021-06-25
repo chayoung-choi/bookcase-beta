@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="2021.06.24">
+    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="2021.06.23">
+      <change afterPath="$PROJECT_DIR$/src/navigation/apps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/routes/Apps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routes/Menus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes/Menus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/V1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/V1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/V2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/V2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/V2Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/V2Detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/V3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/V3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LogoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogoutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="tsconfig.json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -69,7 +86,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/router" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -81,10 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/router" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/router/routes" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
   </component>
@@ -112,8 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624257633986</updated>
       <workItem from="1624257638016" duration="12762000" />
-      <workItem from="1624366873710" duration="3002000" />
-      <workItem from="1624543900756" duration="278000" />
+      <workItem from="1624433105050" duration="14099000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1624264892493</created>
@@ -122,12 +139,12 @@
       <option name="project" value="LOCAL" />
       <updated>1624264892493</updated>
     </task>
-    <task id="LOCAL-00002" summary="2021.06.24">
-      <created>1624539482110</created>
+    <task id="LOCAL-00002" summary="2021.06.23">
+      <created>1624438807428</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1624539482110</updated>
+      <updated>1624438807429</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -149,7 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
-    <MESSAGE value="2021.06.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021.06.24" />
+    <MESSAGE value="2021.06.23" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021.06.23" />
   </component>
 </project>

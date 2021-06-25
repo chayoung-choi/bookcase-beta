@@ -1,5 +1,4 @@
 import React from "react";
-import Menus from "src/router/routes/Menus";
 import {Link} from "react-router-dom";
 import {Button} from "@material-ui/core";
 import PropTypes from 'prop-types';
@@ -18,9 +17,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import apps from "../navigation/apps";
 
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -57,9 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Sidebar = (props) => {
 
-    const menus = Menus;
-console.log("#1 menus", menus);
-
+    const menus = apps;
     const RenderMenus = () => {
         return menus.map((menu, index) => {
             return (
