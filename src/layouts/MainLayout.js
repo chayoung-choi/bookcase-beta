@@ -14,7 +14,7 @@ import Hidden from "@material-ui/core/Hidden";
 import {BrowserRouter, Switch} from "react-router-dom";
 import PropTypes from "prop-types";
 import Navigation from "../components/Navigation";
-import {BottomNavigation, BottomNavigationAction, Box} from "@material-ui/core";
+import {BottomNavigation, BottomNavigationAction, Box, Container} from "@material-ui/core";
 import FolderIcon from '@material-ui/icons/Folder';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(3)
+        padding: theme.spacing(3),
     },
 
 }));
@@ -133,16 +133,16 @@ const MainLayout = (props) => {
             </nav>
             <main className={classes.content}>
                 <div className={classes.toolbar}/>
-                <Switch>
-                    <AppRouter/>
-                </Switch>
+                    <Switch>
+                        <AppRouter/>
+                    </Switch>
             </main>
-                <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNaviation}>
-                    <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-                    <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-                    <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-                    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-                </BottomNavigation>
+                {/*<BottomNavigation value={value} onChange={handleChange} className={classes.bottomNaviation}>*/}
+                {/*    <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />*/}
+                {/*    <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />*/}
+                {/*    <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />*/}
+                {/*    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />*/}
+                {/*</BottomNavigation>*/}
         </div>
     );
 }

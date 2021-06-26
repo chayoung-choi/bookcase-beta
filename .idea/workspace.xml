@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="2021.06.25 Routes 설계">
-      <change afterPath="$PROJECT_DIR$/src/config/Theme.js" afterDir="false" />
+    <list default="true" id="d5b47f28-fecb-421d-8be4-b04b06fe0af4" name="Default Changelist" comment="2021.06.24">
+      <change afterPath="$PROJECT_DIR$/src/components/BookSlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/ApiService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/routes/Apps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes/Apps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="tsconfig.json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -61,9 +62,6 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="ca51e6e0-32c5-4067-9eb5-be3f8e7cdf8c" />
-  </component>
   <component name="ProjectId" id="1uFNymii89ITSoR5UZJcqXR2U2D" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -77,24 +75,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/router" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/router" />
+      <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/router/routes" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
   </component>
@@ -131,21 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624264892493</updated>
     </task>
-    <task id="LOCAL-00002" summary="2021.06.23">
-      <created>1624438807428</created>
+    <task id="LOCAL-00002" summary="2021.06.24">
+      <created>1624539482110</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1624438807429</updated>
+      <updated>1624539482110</updated>
     </task>
-    <task id="LOCAL-00003" summary="2021.06.25 Routes 설계">
-      <created>1624599623495</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1624599623495</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,8 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
-    <MESSAGE value="2021.06.23" />
-    <MESSAGE value="2021.06.25 Routes 설계" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021.06.25 Routes 설계" />
+    <MESSAGE value="2021.06.24" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021.06.24" />
   </component>
 </project>
