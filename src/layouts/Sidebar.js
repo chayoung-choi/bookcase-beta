@@ -7,7 +7,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import apps from "../navigation/apps";
 import Divider from "@material-ui/core/Divider";
 import {makeStyles} from "@material-ui/core/styles";
-import {useTheme} from "@material-ui/core";
+import {Box, useTheme} from "@material-ui/core";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Typography from "@material-ui/core/Typography";
+import {Image} from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     toolbar: theme.mixins.toolbar
@@ -43,7 +48,12 @@ const Sidebar = (props) => {
 
     return (
         <>
-            <div className={classes.toolbar}/>
+            <Toolbar color="inherit">
+                <Image src={process.env.PUBLIC_URL + "/assets/logo.png"}/>
+                <Typography variant="h6" color="inherit">
+                    {process.env.REACT_APP_NAME}
+                </Typography>
+            </Toolbar>
             <Divider/>
             <List>
                 {RenderMenus()}

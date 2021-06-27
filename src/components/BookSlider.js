@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Slider from "react-slick";
 import styled from 'styled-components';
 import {getRequest} from "../utils/ApiService";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import {Card, CardContent} from "@material-ui/core";
 
 const Container = styled.div`
   // overflow:hidden;
@@ -19,7 +19,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
     max-width:100%;
-    max-height:200px;
+    max-height:150px;
 `;
 
 const books = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -89,20 +89,22 @@ const BookSlider = () => {
     };
 
     return (
-        <Container>
-            <h2> Responsive </h2>
-            <StyledSlider {...multipleSettings}>
-                {bookList.map((book, index) => {
-                    return (
-                        <div key={index}>
-                            <ImageContainer>
-                                <Image src={book.download_url}/>
-                            </ImageContainer>
-                        </div>
-                    );
-                })}
-            </StyledSlider>
-        </Container>
+        <Card >
+            <CardContent>
+                <h2> Responsive </h2>
+                <StyledSlider {...responsiveSettings}>
+                    {bookList.map((book, index) => {
+                        return (
+                            <div key={index}>
+                                <ImageContainer>
+                                    <Image src={book.download_url}/>
+                                </ImageContainer>
+                            </div>
+                        );
+                    })}
+                </StyledSlider>
+            </CardContent>
+        </Card>
     );
 }
 export default BookSlider;

@@ -1,24 +1,17 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import AppRouter from "../router/Router";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
-import {createMuiTheme, makeStyles, useTheme} from "@material-ui/core/styles";
-import AppDrawer from "../components/Drawer";
+import {makeStyles, useTheme} from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
-import {BrowserRouter, Switch} from "react-router-dom";
+import {Switch} from "react-router-dom";
 import PropTypes from "prop-types";
-import Navigation from "../components/Navigation";
-import {BottomNavigation, BottomNavigationAction, Box, Container} from "@material-ui/core";
-import FolderIcon from '@material-ui/icons/Folder';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import {Container} from "@material-ui/core";
 
 const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
@@ -58,13 +51,13 @@ const useStyles = makeStyles(theme => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
+        width: `calc(100% - ${drawerWidth}px)`
     },
-
 }));
 
 const MainLayout = (props) => {
     console.log("MainLayout");
-    const { window } = props;
+    const {window} = props;
     const container = window !== undefined ? () => window().document.body : undefined;
     const classes = useStyles();
     const theme = useTheme();
@@ -76,14 +69,13 @@ const MainLayout = (props) => {
         setSidebarOpen(!sidebarOpen);
     };
 
-    const [value, setValue] = React.useState('recents');
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+    // const [value, setValue] = React.useState('recents');
+    // const handleChange = (event, newValue) => {
+    //     setValue(newValue);
+    // };
 
     return (
         <div className={classes.root}>
-            <CssBaseline/>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar color="inherit">
                     <IconButton
@@ -116,7 +108,7 @@ const MainLayout = (props) => {
                             keepMounted: true // Better open performance on mobile.
                         }}
                     >
-                        <Sidebar handleDrawerToggle={handleSidebarToggle} />
+                        <Sidebar handleDrawerToggle={handleSidebarToggle}/>
                     </Drawer>
                 </Hidden>
                 <Hidden xsDown implementation="css">
@@ -137,12 +129,12 @@ const MainLayout = (props) => {
                         <AppRouter/>
                     </Switch>
             </main>
-                {/*<BottomNavigation value={value} onChange={handleChange} className={classes.bottomNaviation}>*/}
-                {/*    <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />*/}
-                {/*    <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />*/}
-                {/*    <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />*/}
-                {/*    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />*/}
-                {/*</BottomNavigation>*/}
+            {/*<BottomNavigation value={value} onChange={handleChange} className={classes.bottomNaviation}>*/}
+            {/*    <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />*/}
+            {/*    <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />*/}
+            {/*    <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />*/}
+            {/*    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />*/}
+            {/*</BottomNavigation>*/}
         </div>
     );
 }
