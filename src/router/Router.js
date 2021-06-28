@@ -1,10 +1,10 @@
 import React, {lazy, Suspense} from "react";
 import {Route, Switch} from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
-import LogoutPage from "../pages/LogoutPage";
 import {Routes} from "./routes";
 
-const Error = lazy(() => import('../pages/Error'))
+const Error = lazy(() => import('src/pages/Error'));
+const LoginPage = lazy(() => import('src/pages/LoginPage'));
+const LogoutPage = lazy(() => import('src/pages/LogoutPage'));
 
 const Router = () => {
 

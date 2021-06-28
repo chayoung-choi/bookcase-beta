@@ -9,10 +9,10 @@ import Divider from "@material-ui/core/Divider";
 import {makeStyles} from "@material-ui/core/styles";
 import {Box, useTheme} from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
-import {Image} from "@material-ui/icons";
+import logo from "../assets/images/logo/logo.png";
+import {Img} from "react-image";
+import { sizing } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
     toolbar: theme.mixins.toolbar
@@ -49,7 +49,9 @@ const Sidebar = (props) => {
     return (
         <>
             <Toolbar color="inherit">
-                <Image src={process.env.PUBLIC_URL + "/assets/logo.png"}/>
+                <Box marginRight={1} alignSelf={"center"}>
+                    <Img src={logo} width={25} height={25}/>
+                </Box>
                 <Typography variant="h6" color="inherit">
                     {process.env.REACT_APP_NAME}
                 </Typography>

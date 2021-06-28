@@ -1,22 +1,30 @@
 import React from "react";
+import {Switch} from "react-router-dom";
+import PropTypes from "prop-types";
 import Sidebar from "./Sidebar";
 import AppRouter from "../router/Router";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import SearchIcon from '@material-ui/icons/Search';
 import Typography from "@material-ui/core/Typography";
-import {makeStyles, useTheme} from "@material-ui/core/styles";
+import {fade, makeStyles, useTheme} from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
-import {Switch} from "react-router-dom";
-import PropTypes from "prop-types";
-import {Container} from "@material-ui/core";
+import {InputBase} from "@material-ui/core";
 
 const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
     root: {
         display: "flex",
+    },
+    title: {
+        flexGrow: 1,
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: 'block',
+        },
     },
     bottomNaviation: {
         position: "fixed",
@@ -39,6 +47,45 @@ const useStyles = makeStyles(theme => ({
         }
     },
     toolbar: theme.mixins.toolbar,
+    search: {
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: fade(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: fade(theme.palette.common.white, 0.25),
+        },
+        marginLeft: 0,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing(1),
+            width: 'auto',
+        },
+    },
+    searchIcon: {
+        padding: theme.spacing(0, 2),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    inputRoot: {
+        color: 'inherit',
+    },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            width: '12ch',
+            '&:focus': {
+                width: '20ch',
+            },
+        },
+    },
     menuButton: {
         marginRight: theme.spacing(2),
         [theme.breakpoints.up("sm")]: {
@@ -87,9 +134,22 @@ const MainLayout = (props) => {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" color="inherit">
+                    <Typography className={classes.title} variant="h6" noWrap>
                         {process.env.REACT_APP_NAME}
                     </Typography>
+                    <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon />
+                        </div>
+                        <InputBase
+                            placeholder="Search…"
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputInput,
+                            }}
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                    </div>
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="menu folders">
