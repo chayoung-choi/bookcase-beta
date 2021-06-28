@@ -1,0 +1,2 @@
+(this.webpackJsonpbookcase=this.webpackJsonpbookcase||[]).push([[5],{255:function(e,c,t){"use strict";t.r(c);t(0);var n=t(3);c.default=function(e){var c=e.location;return Object(n.jsxs)(n.Fragment,{children:[Object(n.jsx)("h2",{children:"\uc798\ubabb\ub41c \uc694\uccad\uc785\ub2c8\ub2e4."}),Object(n.jsx)("p",{children:c.pathname})]})}}}]);
+//# sourceMappingURL=5.6fe28a79.chunk.js.map

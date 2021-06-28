@@ -1,0 +1,2 @@
+(this.webpackJsonpbookcase=this.webpackJsonpbookcase||[]).push([[9],{261:function(e,o,c){"use strict";c.r(o);c(0);var n=c(3);o.default=function(e){var o,c=e.match,s=e.location;return console.log(c),console.log(s),Object(n.jsxs)(n.Fragment,{children:[Object(n.jsx)(n.Fragment,{children:"V2"}),Object(n.jsx)(n.Fragment,{children:(null===(o=c.params)||void 0===o?void 0:o.id)&&c.params.id})]})}}}]);
+//# sourceMappingURL=9.f2886a7e.chunk.js.map
