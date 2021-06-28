@@ -62,7 +62,6 @@ const BookSlider = () => {
                     slidesToShow: 4,
                     slidesToScroll: 4,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -71,7 +70,7 @@ const BookSlider = () => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     initialSlide: 2,
-                    dots: true
+                    infinite: true,
                 }
             },
             {
@@ -79,7 +78,7 @@ const BookSlider = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    dots: true
+                    infinite: true,
                 }
             }
         ]

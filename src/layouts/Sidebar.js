@@ -12,7 +12,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import logo from "../assets/images/logo/logo.png";
 import {Img} from "react-image";
-import { sizing } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
     toolbar: theme.mixins.toolbar
@@ -48,14 +47,17 @@ const Sidebar = (props) => {
 
     return (
         <>
-            <Toolbar color="inherit">
-                <Box marginRight={1} alignSelf={"center"}>
-                    <Img src={logo} width={25} height={25}/>
-                </Box>
-                <Typography variant="h6" color="inherit">
-                    {process.env.REACT_APP_NAME}
-                </Typography>
-            </Toolbar>
+            <Link to={"/"}>
+                <Toolbar color="inherit" onClick={props.handleDrawerToggle}>
+                    <Box marginRight={1} alignSelf="center" borderRadius="borderRadius" width={25} height={25}
+                         overflow="hidden">
+                        <Img src={logo} width="100%" height="100%"/>
+                    </Box>
+                    <Typography variant="h6" color="inherit">
+                        {process.env.REACT_APP_NAME}
+                    </Typography>
+                </Toolbar>
+            </Link>
             <Divider/>
             <List>
                 {RenderMenus()}
@@ -63,5 +65,4 @@ const Sidebar = (props) => {
         </>
     );
 }
-
 export default Sidebar;
