@@ -49,12 +49,17 @@ const BookSlider = () => {
 
     // https://material-ui.com/customization/breakpoints/#breakpoints
     const responsiveSettings = {
+        className: "center",
+        centerMode: true,
+        centerPadding: "60px",
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 5,
+        // slidesToScroll: 1,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1280,

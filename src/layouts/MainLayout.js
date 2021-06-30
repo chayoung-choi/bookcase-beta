@@ -13,6 +13,7 @@ import {fade, makeStyles, useTheme} from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import {InputBase} from "@material-ui/core";
+import AppBarComponent from "../components/common/AppBarComponent";
 
 const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
@@ -109,7 +110,13 @@ const MainLayout = (props) => {
     const classes = useStyles();
     const theme = useTheme();
 
+    const [toolBarTitle, setToolBarTitle] = React.useState(process.env.REACT_APP_NAME);
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+    const changeToolBarTitle = (title) => {
+        console.log("changeToolBarTitle");
+        setToolBarTitle(title);
+    };
 
     const handleSidebarToggle = () => {
         console.log("handleSidebarToggle");
@@ -123,35 +130,36 @@ const MainLayout = (props) => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed" className={classes.appBar}>
-                <Toolbar color="inherit">
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleSidebarToggle}
-                        className={classes.menuButton}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        {process.env.REACT_APP_NAME}
-                    </Typography>
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </div>
-                </Toolbar>
-            </AppBar>
+            <AppBarComponent classes={classes} toolBarTitle={toolBarTitle} handleSidebarToggle={handleSidebarToggle}/>
+            {/*<AppBar position="fixed" className={classes.appBar}>*/}
+            {/*    <Toolbar color="inherit">*/}
+            {/*        <IconButton*/}
+            {/*            color="inherit"*/}
+            {/*            aria-label="open drawer"*/}
+            {/*            edge="start"*/}
+            {/*            onClick={handleSidebarToggle}*/}
+            {/*            className={classes.menuButton}*/}
+            {/*        >*/}
+            {/*            <MenuIcon/>*/}
+            {/*        </IconButton>*/}
+            {/*        <Typography className={classes.title} variant="h6" noWrap>*/}
+            {/*            {toolBarTitle}*/}
+            {/*        </Typography>*/}
+            {/*        <div className={classes.search}>*/}
+            {/*            <div className={classes.searchIcon}>*/}
+            {/*                <SearchIcon />*/}
+            {/*            </div>*/}
+            {/*            <InputBase*/}
+            {/*                placeholder="Search…"*/}
+            {/*                classes={{*/}
+            {/*                    root: classes.inputRoot,*/}
+            {/*                    input: classes.inputInput,*/}
+            {/*                }}*/}
+            {/*                inputProps={{ 'aria-label': 'search' }}*/}
+            {/*            />*/}
+            {/*        </div>*/}
+            {/*    </Toolbar>*/}
+            {/*</AppBar>*/}
             <nav className={classes.drawer} aria-label="menu folders">
                 <Hidden smUp implementation="css">
                     <Drawer
@@ -186,7 +194,7 @@ const MainLayout = (props) => {
             <main className={classes.content}>
                 <div className={classes.toolbar}/>
                     <Switch>
-                        <AppRouter/>
+                        <AppRouter changeToolBarTitle={changeToolBarTitle}/>
                     </Switch>
             </main>
             {/*<BottomNavigation value={value} onChange={handleChange} className={classes.bottomNaviation}>*/}

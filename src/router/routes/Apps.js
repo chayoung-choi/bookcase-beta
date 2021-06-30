@@ -7,6 +7,10 @@ const AppRoutes = [
         component: lazy(() => import('src/views/Home'))
     },
     {
+        path: '/bookshelf',
+        component: lazy(() => import('src/views/Bookshelf'))
+    },
+    {
         path: '/v1',
         component: lazy(() => import('src/views/V1'))
     },

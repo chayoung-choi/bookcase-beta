@@ -1,6 +1,7 @@
 import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
 import InboxIcon from '@material-ui/icons/Inbox';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 
 export default [
@@ -9,6 +10,12 @@ export default [
         title: 'Home',
         icon: <HomeIcon size={20}/>,
         navLink: '/'
+    },
+    {
+        id: 'bookshelf',
+        title: 'Bookshelf',
+        icon: <LibraryBooksIcon size={20}/>,
+        navLink: '/bookshelf'
     },
     {
         id: 'v1',
