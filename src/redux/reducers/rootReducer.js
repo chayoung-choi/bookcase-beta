@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
-// import counter from "./counter";
+import auth from "./auth";
+import counter from "./counter";
 
 // 여러 reducer를 사용하는 경우 reducer를 하나로 묶어주는 메소드입니다.
 // store에 저장되는 리듀서는 오직 1개입니다.
-const RootReducer = combineReducers({
+const rootReducer = combineReducers({
+    auth,
+    counter
 });
 
-export default RootReducer;
+export default rootReducer;

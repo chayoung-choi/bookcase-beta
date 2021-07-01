@@ -36,7 +36,7 @@ const Sidebar = (props) => {
                     <ListItem button key={menu.id}
                         // onClick={(event) => handleListItemClick(event, index)}
                         // selected={index === selectedIndex}
-                              onClick={props.handleDrawerToggle}>
+                            onClick={props.handleDrawerToggle}>
                         <ListItemIcon>{menu.icon}</ListItemIcon>
                         <ListItemText primary={menu.title}/>
                     </ListItem>

@@ -4,8 +4,9 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
-import {AppBar, InputBase, MenuItem, Menu} from "@material-ui/core";
+import {AppBar, InputBase, MenuItem, Menu, Badge} from "@material-ui/core";
 import {AccountCircle} from "@material-ui/icons";
+import NotificationsIcon from '@material-ui/icons/Notifications';
 const AppBarComponent = (props) => {
 
     const [auth, setAuth] = React.useState(true);
@@ -51,6 +52,13 @@ const AppBarComponent = (props) => {
                         }}
                         inputProps={{ 'aria-label': 'search' }}
                     />
+                </div>
+                <div >
+                    <IconButton aria-label="show new notifications" color="inherit">
+                        <Badge badgeContent={0} color="secondary">
+                            <NotificationsIcon />
+                        </Badge>
+                    </IconButton>
                 </div>
                 {auth && (
                     <div>
