@@ -117,7 +117,7 @@ const MainLayout = (props) => {
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
     const changeToolBarTitle = (title) => {
-        console.log("changeToolBarTitle");
+        console.log("changeToolBarTitle ");
         setToolBarTitle(title);
     };
 
