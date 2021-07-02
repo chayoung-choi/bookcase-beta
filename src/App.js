@@ -14,7 +14,7 @@ const App = (props) => {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
                 <MainLayout/>
             </BrowserRouter>
         </ThemeProvider>

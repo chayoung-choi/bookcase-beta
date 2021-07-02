@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware, compose } from "redux";
-import { Provider } from "react-redux";
+import {applyMiddleware, compose, createStore} from "redux";
+import {Provider} from "react-redux";
 import logger from "redux-logger";
-import { composeWithDevTools } from "redux-devtools-extension";
-
+import {composeWithDevTools} from "redux-devtools-extension";
+import persistedReducer from "src/redux/reducers/persistedReducer";
+import {persistStore} from "redux-persist";
+import {PersistGate} from "redux-persist/integration/react";
 import App from "./App";
-import rootReducer from "src/redux/reducers/rootReducer";
-
 import './index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,13 +20,16 @@ const enhancer =
         : composeWithDevTools(applyMiddleware(logger));
 
 // 위에서 만든 reducer를 스토어 만들때 넣어줍니다
-const store = createStore(rootReducer, enhancer);
+const store = createStore(persistedReducer, enhancer);
+const persistor = persistStore(store);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <App/>
+            </PersistGate>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );

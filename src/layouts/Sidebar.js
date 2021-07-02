@@ -32,8 +32,8 @@ const Sidebar = (props) => {
     const RenderMenus = () => {
         return menus.map((menu, index) => {
             return (
-                <Link to={menu.navLink}>
-                    <ListItem button key={menu.id}
+                <Link to={menu.navLink} key={menu.id}>
+                    <ListItem button
                         // onClick={(event) => handleListItemClick(event, index)}
                         // selected={index === selectedIndex}
                             onClick={props.handleDrawerToggle}>
