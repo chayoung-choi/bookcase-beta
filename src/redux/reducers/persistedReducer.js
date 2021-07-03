@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
-import storage from "redux-persist/lib/storage"
 import counter from "./counter";
+
+import storage from "redux-persist/lib/storage"
 import {persistReducer} from "redux-persist";
 
 const persistConfig = {
