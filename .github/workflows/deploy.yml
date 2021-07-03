@@ -3,7 +3,7 @@ name: React Deploy CI
 on:
   push:
     branches:
-      - master
+      - release
 
 jobs:
   build_and_deploy:
