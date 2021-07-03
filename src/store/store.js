@@ -10,8 +10,19 @@ const enhancer =
         ? compose(applyMiddleware())
         : composeWithDevTools(applyMiddleware(logger));
 
-// 위에서 만든 reducer를 스토어 만들때 넣어줍니다
-const store = createStore(persistedReducer, enhancer);
-const persistor = persistStore(store);
+// const logger = createLogger();
+// const sagaMiddleware = createSagaMiddleware();
 
-export default store;
+// export const store = createStore(
+//     rootReducer,
+//     composeWithDevTools(applyMiddleware(sagaMiddleware))
+// );
+
+// 위에서 만든 reducer를 스토어 만들때 넣어줍니다
+export const store = createStore(
+    persistedReducer,
+    enhancer
+);
+
+export const persistor = persistStore(store);
+export default { store, persistor };
