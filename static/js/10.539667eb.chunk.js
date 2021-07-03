@@ -1,2 +1,0 @@
-(this.webpackJsonpbookcase=this.webpackJsonpbookcase||[]).push([[10],{262:function(o,c,e){"use strict";e.r(c);e(0);var n=e(3);c.default=function(o){var c=o.match,e=o.location;return console.log(c),console.log(e),Object(n.jsx)(n.Fragment,{children:"V3 "})}}}]);
-//# sourceMappingURL=10.539667eb.chunk.js.map
