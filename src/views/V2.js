@@ -18,7 +18,7 @@ const V2 = ({match, location}) => {
     const onDecrease = useCallback(() => dispatch(decrease()), [dispatch]);
 
 
-
+    console.log("1");
     console.log(match, location);
 
     return(
