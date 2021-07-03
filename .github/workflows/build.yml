@@ -23,4 +23,5 @@ jobs:
     - name: yarn install, build, deploy
       run: |
         yarn install
-        yarn run deploy --if-defined script-name
+        yarn run build --if-defined script-name
+        yarn run deploy
