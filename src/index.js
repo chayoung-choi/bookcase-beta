@@ -24,7 +24,7 @@ ReactDOM.render(
             <Suspense>
                 <ThemeProvider theme={theme}>
                     <CssBaseline/>
-                    <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+                    <BrowserRouter>
                         <MainLayout/>
                     </BrowserRouter>
                 </ThemeProvider>
